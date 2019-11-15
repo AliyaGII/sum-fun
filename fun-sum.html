@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+  <body>
+    <script>
+  var sum = (function() {
+  function sum(a) {
+    count += +a || 0;
+    return sum;
+  }
+  count.valueOf = function(){
+    return count;
+  }
+  count.toString = valueOf;
+  return sum;
+});
+var count = 0;
+
+console.log(sum(1)(2)(3)()()()());
+console.log(sum(2)(1)()()(23)()())
+    </script>
+  </body>
+</html>
